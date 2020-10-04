@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Product {% endblock%}
+
+{% block content %}
+  <div class="container py-5">
+    <div class="row mt-5">
+      <div class="col-10 mx-auto col-md-6 my-3">
+        <img width="100%" src="{% static 'img/product5.jpg' %}" alt="product image">
+      </div>
+      <div class="col-10 mx-auto col-md-6 my-3">
+        <div>
+          <h1 class="product_title">Huawai Note 10 Ultra Max Pro</h1>
+          <h5 class="text-info font-italic mb-3">
+            <span class="mr-1">$</span>399
+          </h5>
+          <p class="product_description">Product Description</p>
+          <p class="text-justify product_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloribus optio dignissimos non dicta maiores neque perferendis beatae, minima possimus labore eos. Veniam ipsa facilis deleniti temporibus asperiores atque quis!</p>
+          <p class="text-justify product_text"><b>Out of Stock</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock%}
