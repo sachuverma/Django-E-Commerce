@@ -17,7 +17,15 @@ def store(request):
         order = {'get_cart_total': 0, 'get_cart_items': 0, 'shipping': False}
         cartItems = order['get_cart_items']
 
-    products = Product.objects.all()
+    if(request.GET.get('filter') == 'price_inc'):
+        products = Product.objects.all().order_by('price')
+    elif(request.GET.get('filter') == 'price_dec'):
+        products = Product.objects.all().order_by('-price')
+    elif(request.GET.get('filter') == 'nameA_Z'):
+        products = Product.objects.all().order_by('name')
+    else:
+        products = Product.objects.all()
+
     context = {'products': products, 'cartItems': cartItems}
     return render(request, 'store/store.html', context)
 
