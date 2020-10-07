@@ -26,7 +26,7 @@ SECRET_KEY = 'ql)8)=!v7%%ggo=q-zlsmwcvtez4r0um7unvw8c_^+w**=41q8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sachu-online-store.herokuapp.com/', 'localhost']
 
 
 # Application definition
